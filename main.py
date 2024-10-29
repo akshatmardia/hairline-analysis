@@ -7,13 +7,13 @@ def main():
     
     try:
         results = analyzer.process_weekly_images(
-            'week1_left.png',
-            'week1_right.png'
+            'img/week1_left.png',
+            'img/week1_right.png'
         )
         # print("Analysis results:", results)
         
-        analyzer.visualize_results(cv2.imread('week1_left.png'), results.get("left_side")["hairline_data"], results.get("left_side")["texture_metrics"], "Left")
-        analyzer.visualize_results(cv2.imread('week1_right.png'), results.get("right_side")["hairline_data"], results.get("right_side")["texture_metrics"], "Right")
+        analyzer.visualize_results(cv2.imread('img/week1_left.png'), results.get("left_side")["hairline_data"], results.get("left_side")["texture_metrics"], "Left")
+        analyzer.visualize_results(cv2.imread('img/week1_right.png'), results.get("right_side")["hairline_data"], results.get("right_side")["texture_metrics"], "Right")
 
     except Exception as e:
         print(f"Error processing images: {e}")
